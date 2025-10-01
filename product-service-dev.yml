@@ -1,0 +1,18 @@
+spring : 
+  security:
+  oauth2:
+    resource-server:
+      jwt:
+        issuer-uri: http://localhost:8080/realms/rest-api
+datasource:
+  username: postgres
+  password: 123
+  url: jdbc:postgresql://localhost:5432/productdb
+jpa:
+  hibernate:
+    ddl-auto: update
+
+eureka:
+client:
+  service-url:
+    defaultZone: http://localhost:8761/eureka/
