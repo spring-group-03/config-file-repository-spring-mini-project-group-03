@@ -6,9 +6,9 @@ spring :
         issuer-uri: https://auth.kimleang.space/auth/realms/my-realm
 
 datasource:
+  url: jdbc:postgresql://34.124.146.39:5432/products
   username: group03
   password: 123
-  url: jdbc:postgresql://34.124.146.39:5432/products
 jpa:
   hibernate:
     ddl-auto: update
