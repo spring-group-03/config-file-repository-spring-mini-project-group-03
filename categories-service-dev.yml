@@ -1,0 +1,25 @@
+spring:
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+    datasource:
+        url: jdbc:postgresql://localhost:5432/mini-project
+        username: group03
+        password: 123
+    security:
+     oauth2:
+         resourceserver:
+             jwt:
+                 issuer-uri: https://localhost:8080/auth/realms/my-realm
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:8761/eureka/
+
+        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, info
