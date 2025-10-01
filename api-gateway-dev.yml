@@ -1,0 +1,46 @@
+spring : 
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            ## Route to auth-service
+            - id: auth-service
+              uri: lb://AUTH-SERVICE
+              predicates:
+                - Path=/api/v1/auths/**,/api/v1/files/**,/api/v1/profiles/**,/auth-service/v3/api-docs/**
+              filters:
+                - RewritePath=/auth-service/(?<remaining>.*), /${remaining}
+            ## Route to categories-service
+            - id: categories-service
+              uri: lb://CATEGORIES-SERVICE
+              predicates:
+                - Path=/categories/** , /categories-service/v3/api-docs/**
+              filters:
+                - RewritePath=/categories-service/(?<remaining>.*), /${remaining}
+
+            ## Route to products-service
+            - id: products-service
+              uri: lb://PRODUCT-SERVICE
+              predicates:
+                - Path=/products/** , /product-service/v3/api-docs/**
+              filters:
+                - RewritePath=/product-service/(?<remaining>.*), /${remaining}
+springdoc:
+  swagger-ui:
+    urls:
+      - name: auth-service
+        url: /auth-service/v3/api-docs
+      - name: categories-service
+        url: /categories-service/v3/api-docs
+      - name: products-service
+        url: /product-service/v3/api-docs
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, info
