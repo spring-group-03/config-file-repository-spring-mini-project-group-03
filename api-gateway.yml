@@ -42,3 +42,8 @@ eureka:
   instance:
     prefer-ip-address: true
     ip-address: 34.124.146.39
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, info
