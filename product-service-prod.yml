@@ -3,7 +3,8 @@ spring :
   oauth2:
     resource-server:
       jwt:
-        issuer-uri: http://localhost:8080/realms/rest-api
+        issuer-uri: https://auth.kimleang.space/auth/realms/my-realm
+
 datasource:
   username: group03
   password: 123
@@ -15,4 +16,5 @@ jpa:
 eureka:
 client:
   service-url:
-    defaultZone: http://localhost:8761/eureka/
+    defaultZone: http://34.124.146.39:8761/eureka/
+
