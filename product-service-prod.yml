@@ -1,20 +1,18 @@
-spring : 
+spring: 
   security:
-  oauth2:
-    resource-server:
-      jwt:
-        issuer-uri: https://auth.kimleang.space/auth/realms/my-realm
-
-datasource:
-  url: jdbc:postgresql://34.124.146.39:5432/products
-  username: group03
-  password: 123
-jpa:
-  hibernate:
-    ddl-auto: update
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: https://auth.kimleang.space/auth/realms/my-realm
+  datasource:
+    username: group03
+    password: 123
+    url: jdbc:postgresql://34.124.146.39:5432/products
+  jpa:
+    hibernate:
+      ddl-auto: update
 
 eureka:
-client:
-  service-url:
-    defaultZone: http://34.124.146.39:8761/eureka/
-
+  client:
+    service-url:
+      defaultZone: http://34.126.135.232:8761/eureka/
