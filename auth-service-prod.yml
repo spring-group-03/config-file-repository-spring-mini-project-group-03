@@ -29,3 +29,9 @@ minio:
   access-name: admin
   access-secret: admin123
   bucket-name: mini-project
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, info
