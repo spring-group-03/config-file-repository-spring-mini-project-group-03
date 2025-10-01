@@ -4,9 +4,9 @@ spring:
             ddl-auto: update
         show-sql: true
     datasource:
-        url: jdbc:postgresql://localhost:5432/mini-project
-        username: group03
-        password: 123
+        url: jdbc:postgresql://localhost:5432/postgres
+        username: postgres
+        password: 1234
     security:
      oauth2:
          resourceserver:
