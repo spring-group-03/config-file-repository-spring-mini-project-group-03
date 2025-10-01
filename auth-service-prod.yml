@@ -1,0 +1,31 @@
+spring:
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: https://auth.kimleang.space/auth/realms/rest-api
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 10MB
+eureka:
+  client:
+    service-url:
+     defaultZone: http://34.124.146.39:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    ip-address: 34.124.146.39
+server:
+  port: 8081
+  ssl:
+    enabled: false
+keycloak:
+  server-url: https://auth.kimleang.space/auth
+  realm: rest-api
+  client-id: oauth-admin-client
+  client-secret: ixoIknR47TpAcYzhiGI3pdIMVDM8zYaU
+minio:
+  url: http://34.124.146.39:9000
+  access-name: admin
+  access-secret: admin123
+  bucket-name: mini-project
