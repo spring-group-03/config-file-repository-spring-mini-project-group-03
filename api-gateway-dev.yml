@@ -15,7 +15,7 @@ spring :
             - id: categories-service
               uri: lb://CATEGORIES-SERVICE
               predicates:
-                - Path=/categories/** , /categories-service/v3/api-docs/**
+                - Path=/api/v1/category/** , /categories-service/v3/api-docs/**
               filters:
                 - RewritePath=/categories-service/(?<remaining>.*), /${remaining}
 
@@ -23,7 +23,7 @@ spring :
             - id: products-service
               uri: lb://PRODUCT-SERVICE
               predicates:
-                - Path=/products/** , /product-service/v3/api-docs/**
+                - Path=/api/v1/products/** , /product-service/v3/api-docs/**
               filters:
                 - RewritePath=/product-service/(?<remaining>.*), /${remaining}
 springdoc:
