@@ -4,9 +4,9 @@ spring:
             ddl-auto: update
         show-sql: true
     datasource:
-        url: jdbc:postgresql://localhost:5432/categorydb
+        url: jdbc:postgresql://localhost:5433/userdb
         username: postgres
-        password: 1234
+        password: 123
     security:
      oauth2:
          resourceserver:
