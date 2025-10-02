@@ -31,7 +31,7 @@ springdoc:
 
   zipkin:
     tracing:
-      endpoint: http://34.126.135.232:9411
+      endpoint: http://34.126.135.232:9411/api/v2/spans
   tracing:
     sampling:
       probability: 1.0
