@@ -3,7 +3,7 @@ spring:
     oauth2:
       resource-server:
         jwt:
-          issuer-uri: http://localhost:8080/realms/rest-api
+          issuer-uri: https://auth.kimleang.space/auth/realms/rest-api
   servlet:
     multipart:
       max-file-size: 5MB
@@ -11,19 +11,21 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://34.126.135.232:8761/eureka/
-
+      defaultZone: http://34.126.135.232:8761/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 34.126.135.232
 server:
   port: 8081
   ssl:
     enabled: false
 keycloak:
-  server-url: http://localhost:8080
+  server-url: https://auth.kimleang.space/auth
   realm: rest-api
   client-id: oauth-admin-client
-  client-secret: dY90Uo2nz8UGAZ1fdGAEloOf8rK16cIo
+  client-secret: RZtPb3KBuX8j3LHTyYMnmT1L95MJctLN
 minio:
-  url: http://localhost:9000
+  url: http://34.126.135.232:9000
   access-name: admin
   access-secret: admin123
   bucket-name: mini-project
