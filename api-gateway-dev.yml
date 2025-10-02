@@ -8,7 +8,7 @@ spring :
             - id: auth-service
               uri: lb://AUTH-SERVICE
               predicates:
-                - Path=/api/v1/auths/**,/api/v1/files/**,/api/v1/profiles/**,/auth-service/v3/api-docs/**
+                - Path=/api/v1/auths/**,/api/v1/files/**,/api/v1/users/**,/auth-service/v3/api-docs/**
               filters:
                 - RewritePath=/auth-service/(?<remaining>.*), /${remaining}
             ## Route to categories-service
