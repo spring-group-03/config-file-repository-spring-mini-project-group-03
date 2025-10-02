@@ -15,7 +15,7 @@ spring :
             - id: categories-service
               uri: lb://CATEGORIES-SERVICE
               predicates:
-                - Path=/api/v1/category/** , /categories-service/v3/api-docs/**
+                - Path=/api/v1/categories/** , /categories-service/v3/api-docs/**
               filters:
                 - RewritePath=/categories-service/(?<remaining>.*), /${remaining}
 
