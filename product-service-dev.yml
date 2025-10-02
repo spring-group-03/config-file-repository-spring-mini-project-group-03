@@ -3,7 +3,8 @@ spring:
   oauth2:
     resource-server:
       jwt:
-        issuer-uri: http://localhost:8080/realms/rest-api
+        issuer-uri: https://auth.kimleang.space/auth/realms/rest-api
+
 datasource:
   username: postgres
   password: 1234
