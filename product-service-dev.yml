@@ -5,13 +5,14 @@ spring:
       jwt:
         issuer-uri: https://auth.kimleang.space/auth/realms/rest-api
 
-datasource:
-  username: postgres
-  password: 123
-  url: jdbc:postgresql://34.126.135.232:5434/userdb
-jpa:
-  hibernate:
-    ddl-auto: update
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+    datasource:
+        url: jdbc:postgresql://localhost:5433/userdb
+        username: postgres
+        password: 123
 
 eureka:
 client:
