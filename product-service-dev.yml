@@ -1,10 +1,4 @@
 spring: 
-  security:
-  oauth2:
-    resource-server:
-      jwt:
-        issuer-uri: https://auth.kimleang.space/auth/realms/rest-api
-
     jpa:
         hibernate:
             ddl-auto: update
@@ -13,6 +7,12 @@ spring:
         url: jdbc:postgresql://localhost:5433/userdb
         username: postgres
         password: 123
+  security:
+  oauth2:
+    resource-server:
+      jwt:
+        issuer-uri: https://auth.kimleang.space/auth/realms/rest-api
+
 
 eureka:
 client:
