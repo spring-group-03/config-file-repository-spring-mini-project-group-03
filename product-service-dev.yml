@@ -6,7 +6,7 @@ spring:
         issuer-uri: http://localhost:8080/realms/rest-api
 datasource:
   username: postgres
-  password: 123
+  password: 1234
   url: jdbc:postgresql://localhost:5432/productdb
 jpa:
   hibernate:
